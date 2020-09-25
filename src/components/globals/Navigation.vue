@@ -1,21 +1,18 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link>
-    |
-    <router-link to="/match">Match</router-link>
-    |
-    <router-link to="/players">Players</router-link>
-    |
-    <router-link to="/about">About</router-link>
+  <div id="nav" >
+    <div v-for="menuItem in menuItems" :key="menuItem.id">
+    <router-link :to="menuItem.path">{{menuItem.name}}</router-link>
+    </div>
   </div>
-
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import MenuItem from '@/model/navigation/MenuItem'
 
 @Component
 export default class Navigation extends Vue {
+  @Prop() private menuItems: MenuItem[]= [new MenuItem('home', '/', 'Home')];
 }
 </script>
 

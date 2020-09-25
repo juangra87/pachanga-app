@@ -26,21 +26,21 @@ export default class App extends Vue {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: palegreen;
+  background: white;
 }
 
 body{
   margin:0;
 }
 .footer {
-  background-image: linear-gradient(180deg, palegreen,palegreen, white);
+  background-image: linear-gradient(180deg, white,palegreen,palegreen, white);
   padding: 1rem;
   display: flex;
   justify-content: center;
 }
 
 .header {
-  background-image: linear-gradient(180deg, white, palegreen,palegreen);
+  background-image: linear-gradient(180deg, white, palegreen,palegreen,white);
   padding: 1rem;
   display: flex;
   justify-content: center;
